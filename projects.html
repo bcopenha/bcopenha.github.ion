@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: Project</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering Projects Page - Hub for all the projects I have worked on over the last few years">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>So many projects!</h2>
+        <p>
+          I am currently completing my final year in the Bachelors of Science in Engineering, Engineering (Robotics) program at Arizona State University at the Polytechnic campus, within Barrett, the Honors College studying mechanical, electrical, and software engineering as well as working in an on-campus laboratory. My program at the Polytechnic campus and extracurricular laboratory work allows me to work hands on learning the fundamentals of the robotics field and working together on teams for a number of varied projects.
+        </p>
+        <p>
+          Click left and right to see all four projects and then click on the image to go to the one you're interested in!
+        </p>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="photos/microbike/close_up.jpg" style="width:100%">
+            <div class="text">Microbike</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="photos/planter/raw_planter.jpg" style="width:100%">
+            <div class="text">Self-Watering Planter</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="photos/thermostat/overall.jpg" style="width:100%">
+            <div class="text">Self-Adjusting Thermostat</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="photos/cribbage/use.jpg" style="width:100%">
+            <div class="text">Automatic Cribbage</div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <h2>How do I have time for so many projects?</h2>
+        <p>
+          In my decision for a career path and major, I have selected a degree that allows me to learn with hands on experience with invention and problem solving, particularly in the team setting. The majority of my classes involve large scale and heavily weighted group projects to design various electrical, mechanical, and robotic systems. These classes give me practical work combining the disciplines and knowledge of all three of the above engineering focuses. In addition, the core of my classes at the Polytechnic campus are project-based courses through a flipped classroom, meaning all class time is spent working with a team of engineering students to develop solutions for opportunities we identify in this world. These classes are the crux of my education, giving me physical practice with the robotics field and the numerous disciplines that comprise it.
+        </p>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  </body>
+</html>

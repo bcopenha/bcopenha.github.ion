@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: Planter</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering Self Watering Planter - How you can have a green thumb with no work necessary">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>01 THE PROBLEM</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/planter/in_use.jpg" alt="in_use" height="300" width="400">
+          <h3>Problem Statement</h3>
+          <p>
+            This device automatically manages the soil hydration and light level of a potable plant and reports its status via bluetooth in order to familiarize an amatuer gardener with the process of growing difficult plants.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/planter/refill.jpg" alt="refill" height="300" width="400">
+          <h3>Impact Statement</h3>
+          <p>
+            Since this device is aimed to educate and assist amatuer gardeners, it removes the stress of monitoring the watering of their garden as well as constantly keeps the user updated on the plant’s status. While this does take away from the discipline of routine watering and careful study of the plants, it helps them grow more difficult plants that require a greater level of attention that they may not yet be prepared for. However, this does not allow them to learn through failure since the system does the work for them, but allows the user to build confidence in gardening and encourages them to tackle more difficult to grow plants.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>02 PCB FABRICATION</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/planter/Board+1+Pic.jpg" alt="pcb" height="300" width="600">
+          <h3>Power Requirements</h3>
+          <p>
+            The power to the system is supplied via a power brick at 18V and 3A and from there split into two different power rails, 5V and 12V. The regulators selected for this job are the LM7805SX and the LM7812SX for a few reasons. First off is that the SX can handle higher currents at 1.5A compared to the standard LM78XX regulators’ 1A. This allows us to make full use of the motor which draws 1.25A and allows wiggle room for stretch goals on the 5V rail which at max only pulls 0.531A. Additionally the SX comes in a surface mount package. The benefit of this would allow use to meet the instructor defined constraint of surface mount components as well as let us utilize the PCB itself as a heat sink.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/planter/final_board.jpeg" alt="final_board" height="350" width="466">
+          <h3>Physical Fabrication</h3>
+          <p>
+            The PSoC itself has all of its voltage pins tied together, to the 5V rail coming from the linear regulator, as well as all of its ground pins tied together to create a central ground. Then, three 1 microF capacitors were used as bypass capacitors to dampen the electrical noise surrounding the inputs of and outputs of the PSoC. We ensured these components were physically close to the PSoC on the board in order to give them maximum effect.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>03 SUPER-STRUCTURE</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/planter/CAD Drawing 1.jpg" alt="overall" height="350" width="466">
+          <h3>CAD Model Overall</h3>
+          <p>
+            One of the criteria of our project was to have a compact design suitable for indoor use. Planning for this we aimed for something roughly the size and shape of a coffee maker, the result of which you can see in pictures below. The design is broken up into three main parts: The base, the electronics enclosure, and the LED array.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/planter/CAD Drawing 3.jpg" alt="base" height="453" width="605">
+          <h3>CAD Model - Base</h3>
+          <p>
+            The base, the part which the flower pot rests on, is mainly structural and meant to house the water reservoir. While designing the base we made sure that the space within it would allow us to fit a water tight container that could hold a minimum of 1 liter. Earlier designs had a cap on the top of the base to refill the reservoir but in the end was replaced by an easily removable and refillable water bladder.
+          </p>
+          <br class="clearleft">
+          <img class="float_right" src="photos/planter/CAD Drawing 4.jpg" alt="enclosure" height="453" width="605">
+          <h3>CAD Model - Electronics Enclosure</h3>
+          <p>
+            The electronic enclosure, the box that rests atop the base and holds the LED array, was mainly designed to protect the electronics. With the water bladder placed in the base we figured the circuit board and power supply should be mounted above this to avoid any catastrophic failure due to a spill from the reservoir, hence its placement above the base. Considering the size of our board, this piece did not need to be that large of a part. However aligning it with the dimensions of the base made it far more aesthetically pleasing, easier to access, and gave us more wiggle room to position our wires.
+          </p>
+          <br class="clearright">
+        </div>
+        <h2>04 FINAL SCHEMATIC</h2>
+        <hr>
+        <div id="final_schem"></div>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>

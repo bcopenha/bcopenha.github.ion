@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: Cribbage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering Automatic Cribbage - Know how to play? Great! Never heard of it? Even better.">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>01 THE PROBLEM</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/cribbage/final_showcase.jpeg" alt="final_showcase" height="300" width="400">
+          <h3>Problem Statement</h3>
+          <p>
+            The purpose of this project is to create an automatic mechanical cribbage board for families with parents and children ages 6+ that want to connect classic games with the new generation, while indirectly improving counting and arithmetic skills.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/cribbage/testing.jpeg" alt="testing" height="300" width="400">
+          <h3>Impact Statement</h3>
+          <p>
+            We hope to improve relationships between family members by providing a game to bridge the generational gap between parents and their children. The children we interviewed considered Cribbage a dull game, but they also revealed that they enjoy using games to connect with family members. By making our version of the game more entertaining, we could provide a better avenue for them to connect to their family, especially  those who are already familiar with the game. Another goal is to improve math skills and pattern recognition, which was especially appealing to the parents interviewed. However, this version of the game can slow down game play with the incorporation of technology because it adds extra steps into the process. Some of the rules from the traditional game might be incompatible with our version of the game. An example of this is the muggins rule which allows opposing players to take miscalculated points.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>02 PCB FABRICATION</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/cribbage/pcb.png" alt="pcb" height="545" width="459">
+          <h3>Power Requirements</h3>
+          <p>
+            The entire product is powered by a 12V tabletop power supply. The 12V serves to power the speaker subsystem and the rest of the subsystems are powered from the 5V regulator.
+            Powered by the 5V from the 5V regulator, the PIC24FV16KM102 collects signals from the sensors and wifi adapter and sends signals to control the speaker, servo, motor, and LEDs.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/cribbage/board.jpeg" alt="final_board" height="350" width="466">
+          <h3>Physical Fabrication</h3>
+          <p>
+            The speaker driver takes a PWM input from the microcontroller. It amplifies this with a LM358 operational amplifier in a negative feedback configuration. Because the input signal has a DC offset and we are powering the operational amplifier with +12V and Ground, we apply a DC voltage to the positive input pin. The output signal is decoupled with a 1µF capacitor before passing through the speaker and a current limiting resistor.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>03 SUPER-STRUCTURE</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/cribbage/board.jpg" alt="board" height="350" width="466">
+          <h3>CAD Model Overall</h3>
+          <p>
+            To initiate the game, each player must insert one card into the “crib” making a total of four cards. The “crib” sensor uses an LDR to detect the cards being placed into the “crib”. To condition the sensor, we used an operational amplifier (comparator) to compare the voltage values between the LDR and the adjustable potentiometer. The LDR is connected in series to another resistor to create a Voltage divider. If the voltage is higher on the LDR inverting input of the opamp, the opamp output will be high. If the voltage on the adjustable potentiometer non-inverting input of the opamp is higher, the output of the opamp will be low. This allows the user to adjust the sensitivity of the “crib” sensor no matter what light source is surrounding the board.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/cribbage/flag.jpg" alt="flag" height="350" width="605">
+          <h3>CAD Model - Victory</h3>
+          <p>
+            Once the player reaches the last peg hole, it will cause a victory flag to be raised 90 degrees out of the board. The position of the flag’s rotation is controlled by attaching its pole to the shaft of a small dc motor. The direction the motor rotates is then controlled by a motor driver which is an H-Bridge. The motor then stops when it hits either one of the limit switches located at 0 and 90 degrees. The lid that is over the flag is also raised by a small servo with a motor horn.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>04 FINAL SCHEMATIC</h2>
+        <hr>
+        <div id="cribbage_schem"></div>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>

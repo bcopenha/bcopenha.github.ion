@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: Microbike</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering Microbike - Ever want to get from point A to point B at 35 mph 2 feet from the ground?">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>01 THE PROBLEM</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/microbike/front_bike.jpg" alt="microbike" height="304" width="456">
+          <h3>Mission Statement</h3>
+          <p>The goal of this project is to create a compact and ultraportable form of personal transportation that is easy to use. Among the limited selection currently available, existing products are too bulky or heavy to be effective last mile vehicles. Our product should take up the least amount of space possible on public transportation, in an office, or in a classroom. This is key for our targeted user: the last mile commuter. These are people who regularly use public transportation for getting to work or going on errands, but need an effective and efficient way to go the ‘last mile’ to get to their destination. Primary stakeholders include the manufacturer, safety board, retailers, police officers, and other people around the user i.e. fellow passengers on the subway, bus driver, professors. Assumptions made with this product are that the final product will be legal to use on public property users are capable of recharging or replacing any power sources, and users will spend one hour using the product between charges.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/microbike/1224.png" alt="project" height="340" width="612">
+          <h3>Project Solutions</h3>
+          <p>Our team decided to split functions the way we did based on the answers we got to the questions asked in our interviews. Our primary functions stemmed directly from these responses: they specifically indicated they wanted it to be portable (so it wasn’t a nuisance on public transportation and easy to bring with them wherever they go), self-propelled (they wanted to expend minimal effort), and reusable (they need to be able to use it everyday, likely multiple times a day). We added a function of being controllable because our users need to be able to control their transportation device - something they would not have specifically mentioned in their interviews because it is a function of a transportation device that goes unsaid (and autonomous locomotion is out of the scope of this project). Our subfunctions then stemmed further from their answers and the aspects of the functions our team agreed embodied the functions. Since our functions and subfunctions originated from the responses we got during our interview, we could have split our functions up differently by asking different questions and thus getting different answers. We could also have split up functions based on what our team chose to be important functions of the device. This, however, would have potentially led to bias on the part of our team because we would have ignored the input of our users. This is why we went with the approach we did. We wanted to incorporate the ideas and needs of our users directly into our functions and subfunctions.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>02 PROTOTYPING</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/microbike/looksas.jpg" alt="looksas" height="304" width="456">
+          <h3>Looks-As Prototype</h3>
+          <p>
+            The looks-as prototype was built out of PVC piping and connectors. A molded piece of 4x4 was used for the seat and cardboard was laser cut into disks and wrapped with a cardboard “tread” for the wheels. The PVC pipe was cut and joined with connectors. Holes were drilled into the pipe to accommodate axles for the wheels and the folding handlebars. The wheels can rotate, the seat swivels, and the handlebars collapse to make the vehicle more compact. The prototype cannot, however, hold much weight due to the method of construction used for the forks.
+          </p>
+          <br class="clearright">
+          <img class="float_left" src="photos/microbike/cad_looksas.jpg" alt="cad_looksas" height="340" width="612">
+          <h3>CAD Modeling</h3>
+          <p>
+            The purpose of this build was to get a model that would look like the concept we had generated and chosen in our concept selection. This prototype did not need to function as our final would but it needed to show the concepts and main features of the design in order to get user based data collected and conclusions drawn.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>03 TESTING</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/microbike/acceleration.png" alt="acceleration">
+          <h3>Acceleration Testing</h3>
+          <p>
+            Acceleration appears to peak at 9.55 ft/s/s or just under ⅓ gravitational acceleration.
+          </p>
+          <br class="clearright">
+          <table>
+            <tr>
+              <th>Time (s)</th>
+              <th>Acceleration (ft/s/s)</th>
+              <th>Time (s)</th>
+              <th>Acceleration (ft/s/s)</th>
+            </tr>
+            <tr>
+              <td>0.0</td>
+              <td>0</td>
+              <td>3.0</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>0.5</td>
+              <td>7.40</td>
+              <td>3.5</td>
+              <td>4.43</td>
+            </tr>
+            <tr>
+              <td>1.0</td>
+              <td>9.55</td>
+              <td>4.0</td>
+              <td>3.38</td>
+            </tr>
+            <tr>
+              <td>1.5</td>
+              <td>6.74</td>
+              <td>4.5</td>
+              <td>2.90</td>
+            </tr>
+            <tr>
+              <td>2.0</td>
+              <td>7.00</td>
+              <td>5.0</td>
+              <td>1.30</td>
+            </tr>
+            <tr>
+              <td>2.5</td>
+              <td>6.80</td>
+            </tr>
+          </table>
+          <img class="float_left" src="photos/microbike/freq_test.jpg" alt="freq_test" height="453" width="605">
+          <h3>Motor Speed Test</h3>
+          <p>
+            For this test, an object was held in the path of the tape, making a noise every time they collided. The noise was recorded and analyzed to determine the frequency of collisions, which could be used to calculate the motor RPM.
+          </p>
+          <br class="clearleft">
+        </div>
+        <h2>04 FINAL PROTOTYPE</h2>
+        <hr>
+        <div id="final"></div>
+        <div id="final_with_me"></div>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>

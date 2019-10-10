@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: About Me/Contact</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering About Me and Contact - Reach out to me and learn more about what I am persuing">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2> Previous Experience and Qualifications</h2>
+        <ul>
+          <li>Research Assistant – Luminosity Lab</li>
+          <li>AzFSM Process Engineering Student - Intel</li>
+          <li>Unmanned Systems Intern - SwRI</li>
+        </ul>
+
+        <h2>Born and Raised: Tucson Arizona</h2>
+        <p>
+          Going to school in Phoenix, Arizona, I have grown very proud of my hometown, Tucson, in the face of constant judgement and cynical jokes. Tucson is a wonderful place to grow up, home to the Sonoran Desert Museum, Mount Lemmon, and the Tucson Mountains. As a kid, I would hike and mountain bike in the area near my house called Sabino Canyon. Sabino Canyon is shown here on the map and I encourage you to explore the area with the Google Maps below to find out where you'll go on your next visit.
+        </p>
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+        <h3>LinkedIn</h3>
+        Feel free to connect with me on
+        <a href="https://www.linkedin.com/in/bryce-copenhaver/">LinkedIn</a>
+        any time. My resume is also listed there for your convenience.
+        <h2>Contact Me</h2>
+        <h3>Reach out to me!</h3>
+        <p>Required fields are marked with an asterisk *.</p>
+        <form method="post" action="#">
+          <label for="myFName">* First Name:</label>
+          <input type="text" name="myFName" id="myFName" required="required">
+          <label for="myLName">* Last Name:</label>
+          <input type="text" name="myLName" id="myLName" required="required">
+          <label for="myEmail">* E-Mail:</label>
+          <input type="email" name="myEmail" id="myEmail" required="required">
+          <label for="myPhone">Phone:</label>
+          <input type="tel" name="myPhone" id="myPhone" maxlength="12">
+          <label for="myComments">* What do you want to chat about?</label>
+          <textarea name="myComments" id="myComments" rows="2" cols="30" required="required"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+    <script>
+    function myMap() {
+      var mapProp= {
+        center:new google.maps.LatLng(32.3096,-110.8232),
+        zoom:11.25,
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRnl-SB4g84BQnFMzC4PLq9pEQyS-xPqA&callback=myMap"></script>
+  </body>
+</html>

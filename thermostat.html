@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BSC Engineering :: Thermostat</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Bryce Copenhaver Engineering Smart Thermostat - the wonders of laziness">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">BSC Engineering</a></h1>
+        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>01 THE PROBLEM</h2>
+        <hr>
+        <div>
+          <img class="float_right" src="photos/thermostat/overall.jpg" alt="overall" height="300" width="300">
+          <h3>Problem Statement</h3>
+          <p>
+            I live in an apartment that allows me to decrease the temperature each night down to 65 degrees. I also enjoy sleeping with lots of blankets and comforters so I prefer to keep it down this low so that I don't overheat when I sleep. The problem is, when I wake up in the morning, my apartment is too cold for me to get out of bed comfortably. I end up wanting to sleep longer and not start my day as soon as I wake up. I wanted to solve this by somehow having my apartment heat itself up in the morning when I wake up.
+          </p>
+          <br class="clearright">
+        </div>
+        <h2>02 DESIGN</h2>
+        <hr>
+        <div>
+          <img class="float_left" src="photos/thermostat/fingers.jpg" alt="fingers" height="400" width="300">
+          <h3>Turning on the Heat</h3>
+          <p>
+            The thermostat has three mode settings: heat, off, and cool. The apartment will only cool down one set to the cold temperature even if the temperature that is set is lower than the current temperature. This is also the case for the heat mode. If the desired temperature set is above the current temperature, and the apartment thermostat is set to cool, the heating system will not activate. This means I need one of the fingers to turn the apartment from cool to heat in the morning.
+          </p>
+          <br>
+          <p>
+            I also need to have a way to turn the temperature up. My thermostat works by pressing and holding the up and down buttons and then once activated single pressing the buttons once will increase the temperature by 1 degree. I added a second servo to push and hold the up button on the thermostat, Wait a predetermined amount of time, and then press up the amount of degrees between the desired temperature of 74 and the current set temperature.
+          </p>
+          <br class="clearleft">
+          <img class="float_right" src="photos/thermostat/photon.jpg" alt="pcb" height="400" width="300">
+          <h3>Checking the Time</h3>
+          <p>
+            The smart thermostat also needed a way to check what time it was and allow me, the user, to input what values the thermostat was currently set at and what time I wanted to wake up. I chose a Particle Photon Wi-Fi adapter to connect to the internet to constantly query for the time. Then I developed a user interface for the device that allows me to input what the current set temperature is, for example 65 degrees, and the Photon calculates how many steps it needs to press to get up to the desired temperature of 74. Then I am put the wake up time and the Photon calculates what time is 30 minutes before that and begins heating when it realizes the current time is that time.
+          </p>
+          <br class="clearright">
+        </div>
+        <h2>03 FINAL PRODUCT</h2>
+        <hr>
+        <div>
+          <video class="float_left" controls="controls" poster="photos/thermostat/it_works_moment.jpg" width="368" height="688">
+            <source src="photos/thermostat/it_works.mp4" type="video/mp4">
+          </video>
+          <h3>It works!</h3>
+          <p>
+            This video shows the demonstration of one of my first tests of the working prototype. I was not expecting it to work and so I was very excited. The set temperature was 71 and it knew it needed to go up to 74 when the current time was 30 minutes before the "wake up" time. I set this time to be thirty minutes later than it was at the time of this video and did not know my friend was recording to see if it would work.
+          </p>
+          <br class="clearleft">
+        </div>
+      </main>
+      <footer>
+        Copyright &copy; 2019 BSC Engineering<br>
+        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
+        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+      </footer>
+    </div>
+  </body>
+</html>
