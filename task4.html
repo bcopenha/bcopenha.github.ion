@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- why are you inspecting this you snoopy snake <3 Bryce-->
+  <head>
+    <title>Quackmaster</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Quackmaster - A place for ">
+  </head>
+  <body class="content">
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">Quackmaster</a></h1>
+        <h4>All the tasks for September's Edition of Quackmaster</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li> -->
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2>Task 4</h2>
+          <br>
+          <p>Draw the most medium sized circle. Points are only awarded to the person who draws the circle that is 3rd in size. You have 5 minutes. Your time starts now.</p>
+          <p>(Please measure it and send in the size with the submission)</p>
+          <br>
+          <p>Reminder: make sure you have completed Task 1 by now</p>
+          <p>Password for the Final Task: sizedoesmatter</p>
+        </section>
+      </main>
+      <footer>
+        Final Task: <input id='password' type='text'  />
+        <a href="task5.html" onclick="javascript:return validatePass()"> &gt; Enter the password and click here</a>
+        <script>
+        function validatePass(){
+            if(document.getElementById('password').value == 'sizedoesmatter'){
+                return true;
+            }else{
+                alert('wrong password!!');
+                return false;
+            }
+        }
+        </script><br>
+        <br>
+        <br>
+        Copyright &copy; 2020 Quack LLC<br>
+        <a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a><br>
+        <!-- <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br> -->
+        <!-- <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a> -->
+      </footer>
+    </div>
+  </body>
+</html>

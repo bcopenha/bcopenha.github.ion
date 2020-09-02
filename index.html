@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- why are you inspecting this you snoopy snake <3 Bryce-->
   <head>
-    <title>BSC Engineering</title>
+    <title>Quackmaster</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="bryce.css">
-    <meta name="description" content="Bryce Copenhaver Engineering Home Page - Learn more about what I've done and how I can help you">
+    <meta name="description" content="Quackmaster - A place for ">
   </head>
   <body class="content">
     <div id="wrapper">
       <header>
-        <h1><a href="index.html">BSC Engineering</a></h1>
-        <h4>Bryce Copenhaver, Robotics Engineer & Problem Solver</h4>
+        <h1><a href="index.html">Quackmaster</a></h1>
+        <h4>All the tasks for September's Edition of Quackmaster</h4>
       </header>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a>
+          <!-- <li><a href="projects.html">Projects</a>
             <ul>
               <li><a href="microbike.html">Microbike</a></li>
               <li><a href="planter.html">Planter</a></li>
@@ -23,41 +24,47 @@
               <li><a href="cribbage.html">Cribbage</a></li>
             </ul>
           </li>
-          <li><a href="aboutmecontact.html">About Me/Contact</a></li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li> -->
         </ul>
       </nav>
       <main>
         <section>
-          <div id="microbike"></div>
-          <!--<img src="microbike.jpg" alt="microbike" height="auto">-->
-          <h3>Microbike</h3>
-          <p>A project that I did my sophomore year of college where I designed and manufactured a small electric motorcycle that could reach speeds of 35mph.</p>
+          <h2>How to Play</h2>
+          <p>Welcome to Quackmaster!</p>
+          <p>This website is the location of the tasks for this first episode of Quackmaster. While crude and ugly (I dropped out of design school ok?), it does the job of keeping each task sequential and moderately secret. This website is definitely not idiot proof, nor hacker proof, so if you have HTML experience you will be able to cheat and look around the site. We’re on the honor system here, please don’t try to break the site. It cries easily :(</p>
+          <p>General Rules:</p>
+          <u2>
+            <li>You must start recording yourself from the moment before you click and enter the password to reach the task and you can end the recording when you have completed the task.</li>
+            <li>You must read the task out loud.</li>
+            <li>You should talk us through your thought process the entire time. Try not to have silence on film (makes it much more enjoyable to watch)</li>
+            <li>You will be in charge of making sure you know how much time you have left. If you run over you could be disqualified for that task.</li>
+          </u2>
+          <p>When you have finished a task and have the recording complete, zip it up in an email to or share it with <a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a>. Once you have sent it in, you are eligible to enter in the password for the next task and begin the next recording. You don’t have to do all the tasks at once and taking breaks between tasks might be nice. Just make sure to record starting from before you enter in the password.</p>
+          <p>You can record yourself using a phone propped up on a wall, a member of your house that is not playing, or using your webcam on a laptop, but try to keep in mind watchability. Do we want to watch the ceiling while you paint or draw something on your desk? Do we want to see the ground as you walk to complete the task? I’ll be editing it all together and try to get the highlights but try to give me something to work with so that we can all enjoy it together. </p>
+          <p>If anything isn’t fully explained, use your best judgement and the Quackmaster will decide on the day whether your judgement is good or bad.</p>
+          <p>If you have any questions feel free to text me and ask. I don’t have wifi at work so I won’t receive any Facebook messages but I’ll text you back as soon as I can.</p>
+          <p>Or ask the Quackmaster herself.</p>
         </section>
-        <section>
-          <div id="planter"></div>
-          <h3>Self-Watering Planter</h3>
-          <p>A project that I completed in the fall semester of my junior year that measured soil moisture levels and ambient room lighting in order to keep a plant healthy. It would activate a pump to water the plant if the soil moisture levels were too low and would adjust the light coming from the on-board LEDs to make up for the lack of light in the room (if necessary).</p>
-        </section>
-        <section>
-          <div id="thermostat"></div>
-          <h3>Self-Adjusting Thermostat</h3>
-          <p>A side project that I completed in my junior year that turns on my heater in the morning because I don’t like waking up to a cold apartment. Uses two servo motors attached to 3D printed fingers that connect to a Wi-Fi adapter that turns up the heat when it reaches 30 min before wake up time.</p>
-        </section>
-        <section>
-          <div id="cribbage"></div>
-          <h3>Automatic Cribbage</h3>
-          <p>A project I did my spring semester of my junior year where I designed, manufactured, and programmed an automatic Cribbage board that would help children learn how to play Cribbage and improve their counting skills. </p>
-        </section>
-        <div id="aboutme">
-          <h2>A little bit about me...</h2>
-          <p>My name is Bryce Copenhaver and I am a senior of robotics engineering at the polytechnic campus of Arizona State University. My passions include work in autonomous vehicles as well as designing crappy robots to make my everyday life easier. This website is a brief introduction into the work that I have done over my years in college. I hope you enjoy it!</p>
-        </div>
-        <div id="picofme"></div>
       </main>
       <footer>
-        Copyright &copy; 2019 BSC Engineering<br>
-        <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br>
-        <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a>
+        Task 1: <input id='password' type='text'  />
+        <a href="task1.html" onclick="javascript:return validatePass()"> &gt; Enter the password and click here</a>
+        <script>
+        function validatePass(){
+            if(document.getElementById('password').value == 'quackmasterepisode1'){
+                return true;
+            }else{
+                alert('wrong password!!');
+                return false;
+            }
+        }
+        </script><br>
+        <br>
+        <br>
+        Copyright &copy; 2020 Quack LLC<br>
+        <a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a><br>
+        <!-- <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br> -->
+        <!-- <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a> -->
       </footer>
     </div>
   </body>

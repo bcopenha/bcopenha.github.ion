@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- why are you inspecting this you snoopy snake <3 Bryce-->
+  <head>
+    <title>Quackmaster</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Quackmaster - A place for ">
+  </head>
+  <body class="content">
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">Quackmaster</a></h1>
+        <h4>All the tasks for September's Edition of Quackmaster</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li> -->
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2>Task 1</h2>
+          <br>
+          <p>Subscribe the Quackmaster (<a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a>) to an interesting/unique free daily email subscription. The most interesting/unique subscription wins. You have until you start the final task. Your time starts now.</p>
+          <p>(You don’t need to read this part out loud: You can end the recording for this one whenever you want, if you have fun comments keep recording and I can edit them into the video)</p>
+          <br>
+          <p>Password for Task 2:dailyemailsub</p>
+        </section>
+      </main>
+      <footer>
+        Task 2: <input id='password' type='text'  />
+        <a href="task2.html" onclick="javascript:return validatePass()"> &gt; Enter the password and click here</a>
+        <script>
+        function validatePass(){
+            if(document.getElementById('password').value == 'dailyemailsub'){
+                return true;
+            }else{
+                alert('wrong password!!');
+                return false;
+            }
+        }
+        </script><br>
+        <br>
+        <br>
+        Copyright &copy; 2020 Quack LLC<br>
+        <a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a><br>
+        <!-- <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br> -->
+        <!-- <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a> -->
+      </footer>
+    </div>
+  </body>
+</html>

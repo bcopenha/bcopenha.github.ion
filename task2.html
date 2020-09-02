@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- why are you inspecting this you snoopy snake <3 Bryce-->
+  <head>
+    <title>Quackmaster</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bryce.css">
+    <meta name="description" content="Quackmaster - A place for ">
+  </head>
+  <body class="content">
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">Quackmaster</a></h1>
+        <h4>All the tasks for September's Edition of Quackmaster</h4>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="projects.html">Projects</a>
+            <ul>
+              <li><a href="microbike.html">Microbike</a></li>
+              <li><a href="planter.html">Planter</a></li>
+              <li><a href="thermostat.html">Thermostat</a></li>
+              <li><a href="cribbage.html">Cribbage</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutmecontact.html">About Me/Contact</a></li> -->
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2>Task 2</h2>
+          <br>
+          <p>Find the largest and smallest (intact/full sized) leaves you can. Biggest difference in size wins. You have 15 minutes. Your time starts now.</p>
+          <br>
+          <p>Tip to Task 3: you might want to have a member of your house ready to film/help with Task 3. This other person MUST be someone who has already completed the task (they are on Task 4 or 5) or are not participating. </p>
+          <p>Password for Task 3:leafmealone</p>
+        </section>
+      </main>
+      <footer>
+        Task 3: <input id='password' type='text'  />
+        <a href="task3.html" onclick="javascript:return validatePass()"> &gt; Enter the password and click here</a>
+        <script>
+        function validatePass(){
+            if(document.getElementById('password').value == 'leafmealone'){
+                return true;
+            }else{
+                alert('wrong password!!');
+                return false;
+            }
+        }
+        </script><br>
+        <br>
+        <br>
+        Copyright &copy; 2020 Quack LLC<br>
+        <a href="mailto:quackmaster.email@gmail.com">quackmaster.email@gmail.com</a><br>
+        <!-- <a href="mailto:bryce.copenhaver@gmail.com">bryce.copenhaver@gmail.com</a><br> -->
+        <!-- <a href="index.html">Home</a> <a href="projects.html">Projects</a> <a href="aboutmecontact.html">About Me/Contact</a> -->
+      </footer>
+    </div>
+  </body>
+</html>
